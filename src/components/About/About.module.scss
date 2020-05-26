@@ -4,10 +4,20 @@
 .about {
 
   &Info {
-    padding: 50px 0 50px 500px;
-    @include respond-to(desktop) {padding: 45px 0 45px 450px;}
-    @include respond-to(lg) {padding: 25px 0 25px 250px;}
-    @include respond-to(sm) {padding: 25px 0 25px 25px;}
+    padding: 50px 0 50px 250px;
+    @include respond-to(desktop) {padding: 45px 0 45px 250px;}
+    @include respond-to(lg) {padding: 25px 0 25px 200px;}
+    @include respond-to(md) {padding: 25px 0 25px 140px;}
+    @include respond-to(sm) {
+      width: 60%;
+      margin: 0 auto;
+      padding: 25px 0 0;
+    }
+    @include respond-to(xs) {
+      width: auto;
+      margin: 0;
+      padding: 25px 0 25px 25px;
+    }
 
     ul {
       li {

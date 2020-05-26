@@ -6,7 +6,8 @@
   margin-bottom: 240px;
   background-image: linear-gradient($brand 80%, $text 80.1%);
   @include respond-to(sm) {background: $brand;}
-  @include respond-to(md) {margin-bottom: 140px;}
+  @include respond-to(md) {margin-bottom: 240px;}
+  @include respond-to(sm) {margin-bottom: 140px;}
   @include respond-to(560px) {margin-bottom:0; padding-bottom: 40px;}
 
   &Info {
