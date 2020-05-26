@@ -102,6 +102,7 @@
 
             i {
               color: $text;
+              font-size: 30px;
               @include respond-to(560px) {color: $brand;}
             }
           }
