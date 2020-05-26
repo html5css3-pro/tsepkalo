@@ -1,0 +1,35 @@
+@import './reset.scss';
+@import './variables.scss';
+@import './fonts.scss';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, $font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  background: #ffffff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  monospace;
+}
+
+.App {overflow-x: hidden;}
+
+.container {
+  width: 1200px; padding: 0 15px; margin: 0 auto; position: relative; z-index: 2;
+
+  @include respond-to(1250px) {
+    width: 960px;
+  }
+  @include respond-to(md) {
+    width: 720px;
+  }
+  @include respond-to(sm) {
+    width: 100%;
+  }
+}

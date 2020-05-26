@@ -1,0 +1,119 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+
+.intro {
+  position: relative;
+  margin-bottom: 240px;
+  background-image: linear-gradient($brand 80%, $text 80.1%);
+  @include respond-to(sm) {background: $brand;}
+  @include respond-to(md) {margin-bottom: 140px;}
+  @include respond-to(560px) {margin-bottom:0; padding-bottom: 40px;}
+
+  &Info {
+    position: relative;
+
+    padding: 80px 0 20px 480px;
+    @include respond-to(desktop) {padding: 40px 0 20px 400px;}
+    @include respond-to(lg) {padding: 40px 0 20px 200px;}
+    @include respond-to(sm) {padding: 40px 0 20px 20px;}
+    @include respond-to(560px) {padding: 0;}
+
+    &:before {
+      content: '';
+      display: block;
+      width: 1400px; height: 600px;
+      border-radius: 700px / 270px;
+      transform: rotate(-6deg);
+
+      background: $brand url('/assets/img/photo.png') 0 30px no-repeat;
+
+      position: absolute; bottom: -45px; left: 45%; margin-left: -50%; z-index: -1;
+      @include respond-to(desktop) {left: 40%;}
+      @include respond-to(lg) {left: 20%;}
+      @include respond-to(md) {left: 10%;}
+      @include respond-to(sm) {display: none;}
+    }
+
+    a {
+      font-family: $font; color: $text;
+      display: block;
+      @include respond-to(md) {transform: scale(0.9);}
+      @include respond-to(560px) {transform: scale(0.6);}
+      @include respond-to(xs) {transform: scale(0.5);}
+
+      figure {
+        display: flex; align-items: flex-end;
+        @include respond-to(xs) {transform: translateX(-140px);}
+
+        img {}
+        figcaption {
+          font-size: 56px; line-height: 72px;
+          padding-left: 23px;
+
+          strong {
+            font-size: 73px; font-weight: bold;
+            display: block;
+          }
+        }
+      }
+    }
+
+    ul {
+      margin-top: 60px; padding: 0 160px 0 60px;
+      @include respond-to(desktop) {padding: 0 60px 0 60px;}
+      @include respond-to(lg) {padding: 0 0 0 60px;}
+      @include respond-to(560px) {margin-top: 0; padding: 0 0 30px 40px;}
+
+      li {
+        font-family: $font; color: $text;
+        font-size: 20px; line-height: 26px;
+        list-style: disc outside none;
+        padding-left: 10px; margin-bottom: 15px;
+        @include respond-to(md) {font-size: 18px; line-height: 22px;}
+      }
+    }
+  }
+
+  &Action {
+    position: absolute; bottom: -220px; left: 50%; transform: translateX(-50%);
+    @include respond-to(sm) {bottom: -140px;}
+    @include respond-to(560px) {
+      position: relative; bottom: auto; left: auto; transform: translateX(0);
+    }
+
+    ul {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      margin: 0 -100px;
+      @include respond-to(xs) {margin: auto;}
+
+      li {
+
+        a {
+          display: flex; flex-direction: column; align-items: center;
+          width: 60px;
+          margin: 0 50px;
+          @include respond-to(xs) {margin: 0 50px 50px 50px;}
+
+          span {
+            display: flex; align-items: center; justify-content: center;
+            width: 60px; height: 60px;
+            background: $brand; border-radius: 100%;
+            @include respond-to(560px) {background: $text;}
+
+            i {
+              color: $text;
+              @include respond-to(560px) {color: $brand;}
+            }
+          }
+          p {
+            font-family: $font; color: $brand;
+            font-size: 20px; line-height: 22px; text-align: center;
+            margin-top: 15px;
+            @include respond-to(md) {font-size: 18px; line-height: 20px;}
+            @include respond-to(560px) {color: $text;}
+          }
+        }
+      }
+    }
+  }
+}

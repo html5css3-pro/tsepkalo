@@ -1,0 +1,25 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+
+.about {
+
+  &Info {
+    padding: 50px 0 50px 500px;
+    @include respond-to(desktop) {padding: 45px 0 45px 450px;}
+    @include respond-to(lg) {padding: 25px 0 25px 250px;}
+    @include respond-to(sm) {padding: 25px 0 25px 25px;}
+
+    ul {
+      li {
+        margin-bottom: 20px;
+
+        p {
+          font-family: $font; color: $brand;
+          font-size: 15px; line-height: 18px;
+
+          strong {font-weight: bold;}
+        }
+      }
+    }
+  }
+}

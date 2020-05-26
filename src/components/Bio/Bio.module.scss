@@ -1,0 +1,35 @@
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+
+.bio {
+  @include respond-to(lg) {background: $brand;}
+
+  &Info {
+    width: 1072px; height: 872px;
+    margin: 0 auto; padding: 150px 100px 100px 500px;
+
+    background-image: url('/assets/img/family.png'),
+                      url('/assets/img/bg.svg');
+
+    background-position: left bottom, center center;
+    background-repeat: no-repeat;
+
+    @include respond-to(lg) {
+      width: auto; height: auto;
+      padding: 50px 150px 10px 200px;
+      background: none;
+    }
+    @include respond-to(md) {padding: 50px 10px 10px 100px;}
+    @include respond-to(sm) {padding: 50px 10px 10px 10px;}
+
+
+    ul {
+      li {
+        font-family: $font; color: $text;
+        font-size: 14px; line-height: 19px; text-align: right;
+        margin-bottom: 50px;
+        @include respond-to(sm) {text-align: left;}
+      }
+    }
+  }
+}
