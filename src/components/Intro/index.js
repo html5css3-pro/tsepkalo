@@ -22,19 +22,19 @@ const Intro = () => (
         <ul>
           <li>
             <a href="/">
-              <span><i className="fas fa-address-card"></i></span>
+              <span><i className="fas fa-hand-peace"></i></span>
               <p>Поставить подпись</p>
             </a>
           </li>
           <li>
             <a href="/">
-              <span><i className="fas fa-address-card"></i></span>
+              <span><i className="fas fa-user-plus"></i></span>
               <p>Стать волонтером</p>
             </a>
           </li>
           <li>
             <a href="/">
-              <span><i className="fas fa-address-card"></i></span>
+              <span><i className="fas fa-users"></i></span>
               <p>Инициативная группа</p>
             </a>
           </li>
