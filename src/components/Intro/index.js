@@ -21,7 +21,7 @@ const Intro = () => (
       <section className={style.introAction}>
         <ul>
           <li>
-            <a href="https://yandex.by/maps/157/minsk/?ll=27.800976%2C53.913133&mode=usermaps&source=constructorLink&um=constructor%3A423edbdc5e55d0be632cb70b21d02d16989fadaad55ca7287578e398ccb3ad34&z=10" target="_blank" rel="noopener noreferrer">
+            <a href="https://yandex.by/maps/?ll=27.742426%2C53.795086&mode=usermaps&source=constructorLink&um=constructor%3A2959b3e53657fea294bad0c9157d7b0a366ff52d0b63369743a6a2f7492ddf1c&z=10" target="_blank" rel="noopener noreferrer">
               <span><i className="fas fa-hand-peace"></i></span>
               <p>Поставить подпись</p>
             </a>
