@@ -6,7 +6,7 @@
 
   &Info {
     width: 1072px; height: 872px;
-    margin: 0 auto; padding: 150px 100px 100px 500px;
+    margin: 0 auto; padding: 60px 100px 100px 500px;
 
     background-image: url('/assets/img/family1.png'),
                       url('/assets/img/bg.svg');
@@ -27,7 +27,7 @@
       li {
         font-family: $font; color: $text;
         font-size: 14px; line-height: 19px; text-align: right;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
         @include respond-to(sm) {text-align: left;}
       }
     }
