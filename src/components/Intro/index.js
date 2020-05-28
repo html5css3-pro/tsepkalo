@@ -2,16 +2,53 @@ import React from 'react'
 import style from './Intro.module.scss'
 import {list} from './const'
 
+const socialNetworksLinks = [
+  {
+    link: 'https://www.facebook.com/tsepkalo',
+    className: 'fa-facebook-f'
+  },
+  {
+    link: 'https://www.instagram.com/tsepkalo.official',
+    className: 'fa-instagram'
+  },
+  {
+    link: 'https://www.youtube.com/channel/UCyNQ-QygZYwUgXSUQwFtzmQ',
+    className: 'fa-youtube'
+  },
+  {
+    link: 'https://t.me/tsepkalo2020',
+    className: 'fa-telegram-plane'
+  },
+  {
+    link: 'https://bit.ly/tsepkalo',
+    className: 'fa-viber'
+  },
+  {
+    link: 'https://ok.ru/valery.tsepkalovalerytsepkalo',
+    className: 'fa-odnoklassniki'
+  },
+  {
+    link: 'https://vk.com/id541230729',
+    className: 'fa-vk'
+  }
+];
+
 const Intro = () => (
   <div className={style.intro}>
     <div className="container">
       <div className={style.introInfo}>
-        <a href="/" title="Валерий Цепкало">
-          <figure>
-            <img src="/assets/img/logo.svg" alt="Валерий Цепкало" />
-            <figcaption>Валерий <strong>Цепкало</strong></figcaption>
-          </figure>
-        </a>
+        <figure>
+          <img src="/assets/img/logo.svg" alt="Валерий Цепкало" />
+          <figcaption>
+            <div>{socialNetworksLinks.map(({link, className}) => (
+                <a href={link} key={link} target="_blank" rel="noopener noreferrer">
+                  <i className={`fab ${className}`} />
+                </a>
+            ))}
+            </div>
+            <span>Валерий <strong>Цепкало</strong></span>
+          </figcaption>
+        </figure>
         <ul>
           {list.map((item, index) => (
             <li key={index}>{item}</li>

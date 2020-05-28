@@ -35,22 +35,29 @@
       @include respond-to(sm) {display: none;}
     }
 
-    a {
+    figure {
       font-family: $font; color: $text;
-      display: block;
+      display: flex;
       @include respond-to(md) {transform: scale(0.9);}
       @include respond-to(560px) {transform: scale(0.6);}
       @include respond-to(xs) {transform: scale(0.5);}
 
-      figure {
-        display: flex; align-items: flex-end;
-        @include respond-to(xs) {transform: translateX(-140px);}
-
-        img {}
-        figcaption {
+      figcaption {
+        display: flex;
+        flex-direction: column;
+        padding-left: 23px;
+        padding-top: 10px;
+        div {
+          flex-grow: 1;
+          display: flex;
+          a {
+            padding: 6px;
+            color: $text;
+            font-size: 24px;
+          }
+        }
+        span {
           font-size: 56px; line-height: 72px;
-          padding-left: 23px;
-
           strong {
             font-size: 73px; font-weight: bold;
             display: block;
