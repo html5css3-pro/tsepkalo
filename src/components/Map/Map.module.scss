@@ -2,5 +2,45 @@
 @import 'styles/mixins.scss';
 
 .map {
-  
+  padding: 0 150px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  @include respond-to(lg) {
+    padding: 0 75px;
+  }
+  @include respond-to(sm) {
+    padding: 0 50px;
+  }
+  @include respond-to(xs) {
+    padding: 0 10px;
+  }
+
+  & > h2 {
+    font-family: $font;
+    color: $brand;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  & > div {
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    padding-top: 50%;
+    @include respond-to(sm) {
+      padding-top: 75%;
+    }
+
+    & iframe {
+      border: 2px $brand solid;
+      border-radius: 20px;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
 }
